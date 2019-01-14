@@ -23,19 +23,38 @@ public class TodoEntity {
         this.complete = complete;
     }
 
+    public TodoEntity() {
+    }
+
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTask() {
         return task;
     }
 
+    public void setTask(String task) {
+        this.task = task;
+    }
+
     public Instant getCreationDate() {
         return creationDate;
     }
 
+    public void setCreationDate(Instant creationDate) {
+        this.creationDate = creationDate;
+    }
+
     public boolean isComplete() {
         return complete;
+    }
+
+    public void setComplete(boolean complete) {
+        this.complete = complete;
     }
 }

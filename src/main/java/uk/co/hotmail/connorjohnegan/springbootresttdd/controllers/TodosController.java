@@ -13,9 +13,14 @@ public class TodosController {
     @Autowired
     private TodosRepository todosRepository;
 
-    @PostMapping()
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public TodoEntity create(@RequestBody TodoEntity todoEntity) {
         return todosRepository.save(todoEntity);
+    }
+
+    @GetMapping("{id}")
+    public TodoEntity read(@PathVariable Long id) {
+        return todosRepository.findById(id).get();
     }
 }
